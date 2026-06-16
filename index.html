@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jer̀ange | Premium E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-placeholder" onclick="switchPage('home')">
+               <h1>JERANGE</h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a class="nav-link active" onclick="switchPage('home')">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" onclick="switchPage('pricing')">Pricing</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link">Services▾</a>
+                        <div class="dropdown-menu">
+                            <a onclick="switchPage('home')" class="filter-btn" data-filter="cars">Cars</a>
+                            <a onclick="switchPage('home')" class="filter-btn" data-filter="cosmetics">Cosmetics</a>
+                            <a onclick="switchPage('home')" class="filter-btn" data-filter="gaming">Gaming</a>
+                            <a onclick="switchPage('home')" class="filter-btn" data-filter="fashion">Fashion</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" onclick="switchPage('contact')">Contact</a></li>
+                    <li>
+                        <div class="cart-icon" onclick="toggleCartModal()" style="cursor: pointer;">
+                            🛒 Cart <span class="cart-count" id="cart-count">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1 style="color: #ffffff !important; position: relative !important; z-index: 10 !important; display: block !important; margin-bottom: 1rem;">Shop with eases</h1>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">This is where curated luxury meets the ease of effortless shopping.</p>
+                <button class="btn" onclick="switchPage('pricing')">Explore Packages</button>
+            </div>
+
+            <h2 style="margin-bottom: 1.5rem;"> Products</h2>
+            <div class="product-grid">
+                 
+              <!--This section is only for anything fashion related-->
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2xhc3NpYyUyMExlYXRoZXIlMjBCaWtlciUyMEphY2tldHxlbnwwfHwwfHx8MA%3D%3D" alt="Classic Leather Biker Jacket" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Classic Leather Biker Jacket</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Premium top-grain lambskin leather jacket featuring asymmetrical zippers and tailored fit stitching.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$299</span>
+        <button class="btn" onclick="addToCart('Classic Leather Biker Jacket', 299)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://plus.unsplash.com/premium_photo-1764481902408-d61629d92445?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fE1pbmltYWxpc3QlMjBXb29sJTIwT3ZlcmNvYXR8ZW58MHx8MHx8fDA%3D" alt="Minimalist Wool Overcoat" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Minimalist Wool Overcoat</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Sleek, double-breasted outerwear crafted from a premium heavy-blend insulating wool matrix.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$350</span>
+        <button class="btn" onclick="addToCart('Minimalist Wool Overcoat', 350)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1615397587950-3cbb55f95b77?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8T3ZlcnNpemVkJTIwU3RyZWV0d2VhciUyMEhvb2RpZXxlbnwwfHwwfHx8MA%3D%3D" alt="Oversized Streetwear Hoodie" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Oversized Streetwear Hoodie</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Heavyweight 450GSM organic cotton hoodie featuring dropped shoulders and kangaroo pocket builds.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$85</span>
+        <button class="btn" onclick="addToCart('Oversized Streetwear Hoodie', 85)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1718252540558-7b383b52642e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFByZW1pdW0lMjBTZWx2ZWRnZSUyMERlbmltJTIwSmVhbnN8ZW58MHx8MHx8fDA%3D" alt="Premium Selvedge Denim Jeans" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Premium Selvedge Denim Jeans</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Raw, indigo-dyed Japanese selvedge denim structured with a classic straight-taper profile cut.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$145</span>
+        <button class="btn" onclick="addToCart('Premium Selvedge Denim Jeans', 145)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1756452720912-cdfb8d7f7699?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNsb3RoaW5nJTIwKFVyYmFuJTIwQ2FyZ28lMjBKb2dnZXJzKXxlbnwwfHwwfHx8MA%3D%3D" alt="Urban Cargo Joggers" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Urban Cargo Joggers</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Tactical utility streetwear joggers fitted with multi-pocket layouts and weather-resistant fabrics.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$95</span>
+        <button class="btn" onclick="addToCart('Urban Cargo Joggers', 95)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1612889002991-fbfaf775d231?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8THV4dXJ5JTIwU2lsayUyMEJ1dHRvbi1Eb3dufGVufDB8fDB8fHww" alt="Luxury Silk Button-Down" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Luxury Silk Button-Down</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Ultra-smooth 100% mulberry silk long-sleeve dress shirt providing an effortless drape aesthetic.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$180</span>
+        <button class="btn" onclick="addToCart('Luxury Silk Button-Down', 180)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1608629601270-a0007becead3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3VlZGUlMjBDaGVsc2VhJTIwQm9vdHN8ZW58MHx8MHx8fDA%3D" alt="Suede Chelsea Boots" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Suede Chelsea Boots</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Handcrafted Italian suede boots complete with flexible elastic side panels and durable crepe soles.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$220</span>
+        <button class="btn" onclick="addToCart('Suede Chelsea Boots', 220)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UmV0cm8lMjBTaWxob3VldHRlJTIwU25lYWtlcnN8ZW58MHx8MHx8fDA%3D" alt="Retro Silhouette Sneakers" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Retro Silhouette Sneakers</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Vintage-inspired low-top leather sneakers sporting premium suede overlays and gum outsoles.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$130</span>
+        <button class="btn" onclick="addToCart('Retro Silhouette Sneakers', 130)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1747731141445-7656d7467969?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEF2aWF0b3IlMjBUaW50ZWQlMjBTdW5nbGFzc2VzfGVufDB8fDB8fHww" alt="Aviator Tinted Sunglasses" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Aviator Tinted Sunglasses</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Lightweight gold-plated metal frame eyewear fitted with 100% UVA/UVB protective tinted lenses.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$110</span>
+        <button class="btn" onclick="addToCart('Aviator Tinted Sunglasses', 110)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1579543768549-96d37c1df78f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TWluaW1hbGlzdCUyMENocm9ub2dyYXBoJTIwV2F0Y2h8ZW58MHx8MHx8fDA%3D" alt="Minimalist Chronograph Watch" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Minimalist Chronograph Watch</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Matte black stainless steel timepiece engineered with a genuine top-stitch leather band configuration.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$195</span>
+        <button class="btn" onclick="addToCart('Minimalist Chronograph Watch', 195)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1591357037205-166318b51afd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TGluZW4lMjBDdWJhbiUyMENvbGxhciUyMFNoaXJ0fGVufDB8fDB8fHww" alt="Linen Cuban Collar Shirt" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Linen Cuban Collar Shirt</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Breathable, lightweight flax linen blend shirt tailored with a relaxed holiday Cuban collar line.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$65</span>
+        <button class="btn" onclick="addToCart('Linen Cuban Collar Shirt', 65)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1537465978529-d23b17165b3b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVuaW0lMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D" alt="Distressed Denim Jacket" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Distressed Denim Jacket</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Vintage wash jean tracker jacket embellished with detailed hand-distressed tearing styling points.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$120</span>
+        <button class="btn" onclick="addToCart('Distressed Denim Jacket', 120)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1657603719375-8ffdacaac790?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TGVhdGhlciUyME1lc3NlbmdlciUyMEJhZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Leather Messenger Travel Bag" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Leather Messenger Bag</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Full-grain leather satchel built with dedicated brass buckles and shockproof laptop inner compartments.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$210</span>
+        <button class="btn" onclick="addToCart('Leather Messenger Bag', 210)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://plus.unsplash.com/premium_photo-1673458070037-8cc98a465c0b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8S25pdCUyMEZpc2hlcm1hbiUyMFN3ZWF0ZXJ8ZW58MHx8MHx8fDA%3D" alt="Knit Fisherman Sweater" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Knit Fisherman Sweater</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Thick, cable-knit crewneck pullover woven from ultra-soft warming Merino wool blends.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$115</span>
+        <button class="btn" onclick="addToCart('Knit Fisherman Sweater', 115)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1611308725032-74f0a551d018?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2F0ZXJwcm9vZiUyMFdpbmRicmVha2VyfGVufDB8fDB8fHww" alt="Premium Waterproof Windbreaker" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Waterproof Windbreaker</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Matte-finished techwear shell jacket engineered with taped seams and waterproof zippers.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$140</span>
+        <button class="btn" onclick="addToCart('Waterproof Windbreaker', 140)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1619470148547-0adbfc64b595?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VGFpbG9yZWQlMjBDcm9wcGVkJTIwVHJvdXNlcnN8ZW58MHx8MHx8fDA%3D" alt="Tailored Cropped Trousers" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Tailored Cropped Trousers</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Smart-casual slim trousers tapering down cleanly to an elegant ankle-skimming cropped base finish.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$78</span>
+        <button class="btn" onclick="addToCart('Tailored Cropped Trousers', 78)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1610904497231-78537234b552?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3VlZGUlMjBCb21iZXIlMjBKYWNrZXR8ZW58MHx8MHx8fDA%3D" alt="Suede Bomber Jacket" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Suede Bomber Jacket</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Ultra-luxurious tan suede bomber outer layer outfitted with elastic knit cuffs and smooth lining handles.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$260</span>
+        <button class="btn" onclick="addToCart('Suede Bomber Jacket', 260)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/174804228/photo/wallet-on-table.jpg?s=612x612&w=0&k=20&c=JdM21_azCC7pO3_af6P6Kv047qQuTJVfJE-0-1TZMMU=" alt="Luxury Leather Wallet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Luxury Leather Wallet</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Slim bifold pocket companion handcrafted out of vegetable-tanned leather hosting RFID shielding.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$55</span>
+        <button class="btn" onclick="addToCart('Luxury Leather Wallet', 55)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/185059616/photo/arrangement-of-winter-socks.jpg?s=1024x1024&w=is&k=20&c=Pqf3mNPFdEjA8wknyT7ocNgWXFS6j8Qp51f0tbgB54I=" alt="Graphic Accent Socks Combo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Graphic Accent Socks Pack</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A three-pack selection of comfortable combed cotton crew socks displaying bold graphic geometric weaves.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$24</span>
+        <button class="btn" onclick="addToCart('Graphic Accent Socks Pack', 24)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="fashion">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1175677791/photo/blue-cotton-shirt-isolated.jpg?s=612x612&w=0&k=20&c=UZ6J8whYVtvGixyFOiotyKQ3Q5XmHvn_Bw10aXYMbr4=" alt="Heavyweight Cotton Tee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Heavyweight Cotton Tee</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Boxy-fit, solid box crewneck essential spun completely out of durable 300GSM carded cotton yarn builds.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$35</span>
+        <button class="btn" onclick="addToCart('Heavyweight Cotton Tee', 35)">Add To Cart</button>
+    </div>
+</div>
+
+<!--This section is only for anything fashion related-->  
+
+              <!--This category is only fors oo-->
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/472123295/photo/rolls-royce-wraith.jpg?s=612x612&w=0&k=20&c=F94yLHveoevi9qNvLK5Thpy4Dua6cxJs8qXwgPFU0xs=" alt="Rolls-Royce Phantom" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Rolls-Royce Phantom</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">The pinnacle of bespoke luxury, featuring a whisper-quiet twin-turbo V12 engine and unmatched ride comfort.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$460,000</span>
+        <button class="btn" onclick="addToCart('Rolls-Royce Phantom', 460000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://plus.unsplash.com/premium_photo-1736967280298-1dc414b8a611?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QnVnYXR0aSUyMFRvdXJiaWxsb258ZW58MHx8MHx8fDA%3D" alt="Bugatti Tourbillon" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Bugatti Tourbillon</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An engineering masterpiece powered by an all-new naturally aspirated V16 engine and triple electric motors.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$4,300,000</span>
+        <button class="btn" onclick="addToCart('Bugatti Tourbillon', 4300000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://images.unsplash.com/photo-1752959820162-ab8044002d32?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGFnYW5pJTIwVXRvcGlhfGVufDB8fDB8fHww" alt="Pagani Utopia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Pagani Utopia</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A striking combination of art and science, utilizing a bespoke AMG-sourced twin-turbo V12 with a manual gearbox.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$2,500,000</span>
+        <button class="btn" onclick="addToCart('Pagani Utopia', 2500000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2091032972/photo/koenigsegg-jesko-a-swedish-supercar-5-0l-twin-turbo-v8-engine-1280hp-on-standard-gasoline-and.jpg?s=612x612&w=0&k=20&c=3q8I0LIZL9fo8QMTeQAnanhy3jJ9sEVp4_AyaIkyqPc=" alt="Koenigsegg Jesko" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Koenigsegg Jesko</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A boundary-pushing hypercar sporting a revolutionary 9-speed multi-clutch Light Speed Transmission.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$3,000,000</span>
+        <button class="btn" onclick="addToCart('Koenigsegg Jesko', 3000000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2230109888/photo/ferrari-sf90-spider-sports-car-in-monaco.jpg?s=612x612&w=0&k=20&c=HYoYDtTBu01lx1gyq1r0zIpNqP3UpKSwTVjSWgJYj_Q=" alt="Ferrari SF90 Spider" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Ferrari SF90 Spider</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An open-top hybrid hypercar generating 986 horsepower from a twin-turbo V8 working with three electric motors.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$570,000</span>
+        <button class="btn" onclick="addToCart('Ferrari SF90 Spider', 570000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2279724648/photo/lamborghini-revuelto-high-performance-supercar.jpg?s=612x612&w=0&k=20&c=SjEfapYZyh7LSxFoHkfp3SdBmX3BEUygp1xrYOOHFNM=" alt="Lamborghini Revuelto" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Lamborghini Revuelto</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">The next generation of charging performance, featuring a roaring plug-in hybrid V12 layout.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$608,000</span>
+        <button class="btn" onclick="addToCart('Lamborghini Revuelto', 608000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2227245508/photo/bentley-flying-spur.jpg?s=612x612&w=0&k=20&c=UWMdOhIDxH3BAK007cggPkoZ52MTSTdXHcY_fJ6hGds=" alt="Bentley Flying Spur" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Bentley Flying Spur</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">The definitive four-door luxury grand tourer, seamlessly blending performance agility and hand-crafted cabin details.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$230,000</span>
+        <button class="btn" onclick="addToCart('Bentley Flying Spur', 230000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/504882792/photo/aston-martin-vanquish-sports-car.jpg?s=612x612&w=0&k=20&c=logj7JqRH6GtNv1FmSEpq6-rF6_p_6bPkTcD49WIJ1k=" alt="Aston Martin Vanquish" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Aston Martin Vanquish</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A breathtaking flagship grand tourer driven by a menacing front-mounted twin-turbo V12 engine architecture.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$429,000</span>
+        <button class="btn" onclick="addToCart('Aston Martin Vanquish', 429000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1974219389/photo/mclaren-600lt-car.jpg?s=612x612&w=0&k=20&c=qpbqY7Zd2jSLllJS8_hIHKdjPm74gPUTZ6uQ4rUH0-E=" alt="McLaren 750S" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>McLaren 750S</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An incredibly lightweight supercar delivering absolute racetrack-level precision to standard road surfaces.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$324,000</span>
+        <button class="btn" onclick="addToCart('McLaren 750S', 324000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/480613395/photo/porsche-911-turbo-s-convertible.jpg?s=612x612&w=0&k=20&c=O9yWDws8TPHf0fQi2QoI8AM0p5YvEhEpandYFzosYI0=" alt="Porsche 911 Turbo S" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Porsche 911 Turbo S</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">The benchmark benchmark all-weather supercar, offering point-and-shoot hypercar acceleration with daily drivability.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$230,000</span>
+        <button class="btn" onclick="addToCart('Porsche 911 Turbo S', 230000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2191619349/photo/mercedes-benz-maybach-s-680-at-miami-beach-white-and-black-mercedes-benz-maybach-s-680-at.jpg?s=612x612&w=0&k=20&c=IhI2d3HTZ_Uug5WJWqN_NXYjQ7_naYzIsjHeF1CrEFo=" alt="Mercedes-Maybach S-Class" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Mercedes-Maybach S-Class</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An extended luxury sanctuary built with premium reclining rear lounges and an optional twin-turbo V12 option.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$198,000</span>
+        <button class="btn" onclick="addToCart('Mercedes-Maybach S-Class', 198000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1272473798/photo/the-new-maserati-mc20-supercar-presented-in-world-premiere-in-modena-the-car-is-the-evolution.jpg?s=612x612&w=0&k=20&c=5M7BfBqTHdvHmNJZrdomw-OdWP9WYULACzfE1QACJyQ=" alt="Maserati MC20" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Maserati MC20</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A gorgeous Italian mid-engine exotic powered by the innovative F1-derived Nettuno twin-turbo V6 engine.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$242,000</span>
+        <button class="btn" onclick="addToCart('Maserati MC20', 242000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2153280346/photo/a-portrait-of-a-black-and-white-land-rover-range-rover-suv-cruising-in-a-downtown-district.jpg?s=612x612&w=0&k=20&c=3X2_t8quGdYynsPErTe-OS2RcEjv0yqeQ4MU9yBIkzw=" alt="Range Rover SV Autobiography" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Range Rover SV</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">The absolute benchmark for luxury off-road capability, combining executive comfort with an imposing presence.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$209,000</span>
+        <button class="btn" onclick="addToCart('Range Rover SV', 209000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2207937906/photo/luxury-gold-audi-e-tron-gt-sedan-parked-on-a-cobblestone-street-in-urban-city-setting.jpg?s=612x612&w=0&k=20&c=ZTj1kD-msfNdSZk4u6x0_TGlH8GN87DQo8neq2me-MY=" alt="Audi RS e-tron GT" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Audi RS e-tron GT</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An all-electric grand tourer built with dual electric synchronous motors and a state-of-the-art battery configuration.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$147,000</span>
+        <button class="btn" onclick="addToCart('Audi RS e-tron GT', 147000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2220975802/photo/bmw-x7.jpg?s=612x612&w=0&k=20&c=5LJUdj57Riz6BQ6p5LqRS4ibNPi3DXpObAHje7T110M=" alt="BMW Alpina XB7" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>BMW Alpina XB7</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An exceptionally fast 3-row luxury sports activity vehicle custom calibrated by the Alpina performance team.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$150,000</span>
+        <button class="btn" onclick="addToCart('BMW Alpina XB7', 150000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2153280220/photo/a-portrait-of-a-blue-lexus-rcf-sedan-cruising-in-a-downtown-district.jpg?s=612x612&w=0&k=20&c=sHQ_eDweOZmgME-wsw1rOr-aljvuAgDzC-3seE9toHI=" alt="Lexus LC 500 Inspiration" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Lexus LC 500</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A modern grand touring coupe harboring a beautifully vocal, naturally aspirated 5.0-liter V8 engine setup.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$116,000</span>
+        <button class="btn" onclick="addToCart('Lexus LC 500', 116000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2204539566/photo/cadillac-ct5-v-series-blackwing-display-cadillac-offers-the-ct5-blackwing-with-a-668hp-6-2l.jpg?s=612x612&w=0&k=20&c=DllPN56ycG0r0LdBv7Em7e4gSY-eI5KeIJuG41bnH-8=" alt="Cadillac Celestiq" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Cadillac Celestiq</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An ultra-exclusive, hand-crafted electric flag bearer redefining high-end luxury layouts from the ground up.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$340,000</span>
+        <button class="btn" onclick="addToCart('Cadillac Celestiq', 340000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1293397260/photo/ev-concept-car-on-asphalt-road-3d-rendering-with-my-own-creative-design.jpg?s=612x612&w=0&k=20&c=H1f0RjN5yOiuyL8YmYGMomudNxr7EiTDOdAi2d7H5iY=" alt="Lucid Air Sapphire" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Lucid Air Sapphire</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">The absolute quickest accelerating luxury sedan on Earth, producing a mind-bending 1,234 horsepower.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$249,000</span>
+        <button class="btn" onclick="addToCart('Lucid Air Sapphire', 249000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2202341175/photo/close-up-of-very-expensive-exclusive-electric-sports-car-rimac-nevera-black-and-green-colored.jpg?s=612x612&w=0&k=20&c=w_mKf7S3yfjPBTyiorFICkn1DkcItRK1zv50j6Cxh3E=" alt="Rimac Nevera" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Rimac Nevera</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An all-electric hypercar record-breaker utilizing independent quad motors for intelligent torque vectoring.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$2,200,000</span>
+        <button class="btn" onclick="addToCart('Rimac Nevera', 2200000)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cars">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2232234042/photo/p72.jpg?s=612x612&w=0&k=20&c=WNO6RPiz4OuQ6whh-LDccHNhS9HWC31i1bsTIyCn3zY=" alt="Hennessey Venom F5" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Hennessey Venom F5</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A raw visceral American hypercar purely engineered to eclipse the historic 300 mph top speed barrier.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$3,000,000</span>
+        <button class="btn" onclick="addToCart('Hennessey Venom F5', 3000000)">Add To Cart</button>
+    </div>
+</div>
+<!--This category is only fors oo-->  
+
+
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2054223203/photo/cosmetic-essence-in-glass-bottle-with-pipette-in-transparent-water-with-bubbles.jpg?s=612x612&w=0&k=20&c=chc0Zz12RXl9EAOES-5Ah4dowMsfOESkeGoCyhsgzlY=" alt="Hydrating Hyaluronic Acid Serum" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Hydrating Hyaluronic Serum</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An ultra-plumping daily serum engineered to lock in deep moisture and revive skin radiance.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$38</span>
+        <button class="btn" onclick="addToCart('Hydrating Hyaluronic Serum', 38)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1002710926/vector/brown-liquid-lipstick-lip-gloss-in-elegant-glass-bottle-with-black-lid-closed-and-open.jpg?s=612x612&w=0&k=20&c=ubz2yLiVCWWpVD_1V0nflBZ_L6igBMWSe4_LxYymosA=" alt="Matte Velvet Liquid Lipstick" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Matte Velvet Liquid Lipstick</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Long-wear, high-pigment liquid lipstick delivering a transfer-proof, weightless matte finish.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$22</span>
+        <button class="btn" onclick="addToCart('Matte Velvet Liquid Lipstick', 22)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1350458711/photo/glass-bottle-with-sea-buckthorn-oil-berries-and-branches-of-sea-buckthorn-on-light-background.jpg?s=612x612&w=0&k=20&c=WJHV7P6EDcP9Um87TfwrddtIUcSl-FzE7SdTwBXyT3U=" alt="Vitamin C Brightening Cream" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Vitamin C Brightening Cream</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A potent antioxidant face cream formulated to fade dark spots and even out skin tone texture.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$45</span>
+        <button class="btn" onclick="addToCart('Vitamin C Brightening Cream', 45)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1428653631/photo/mascara-and-brush-with-geometric-shapes-on-white-background.jpg?s=612x612&w=0&k=20&c=BpBWnyhmQEESKYNV0br-bmzj-vpgcPbwEwvXYj100uU=" alt="Pro HD Waterproof Mascara" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Pro HD Waterproof Mascara</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Smudge-proof volume booster built to lift, lengthen, and curl lashes for all-day definition.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$18</span>
+        <button class="btn" onclick="addToCart('Pro HD Waterproof Mascara', 18)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1224467204/photo/nude-makeup-products-composition.jpg?s=612x612&w=0&k=20&c=-epGGjjYLYiugbqYDZL3ncKGULkAnZ05ehQbar41qYg=" alt="Flawless Blend Liquid Foundation" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Flawless Blend Foundation</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Medium-to-full buildable foundation offering a natural, breathable second-skin glow.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$34</span>
+        <button class="btn" onclick="addToCart('Flawless Blend Foundation', 34)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1132088531/photo/strawberry-body-scrub-with-sea-salt.jpg?s=612x612&w=0&k=20&c=HglLOJr4XTXEtiDhqNqFicqMTePEfebo3slt12YhfhI=" alt="Exfoliating Pink Clay Mask" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Exfoliating Pink Clay Mask</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Detoxifying French pink clay mask designed to tighten pores and gently refine rough skin.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$28</span>
+        <button class="btn" onclick="addToCart('Exfoliating Pink Clay Mask', 28)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1316619059/photo/oil-dropper-bottle-bubbles-in-the-brightly-lit-yellow-oil-in-contrast-with-the-nature-blurred.jpg?s=612x612&w=0&k=20&c=Z24KkkEaSIPPmBrSX6XOw8k5XABTXBI2bM2DyoRwNo4=" alt="Luxurious Rosehip Face Oil" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Luxurious Rosehip Face Oil</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">100% organic cold-pressed oil layout packed with essential fatty acids for nighttime skin repair.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$42</span>
+        <button class="btn" onclick="addToCart('Luxurious Rosehip Face Oil', 42)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/486485996/photo/your-ads-mosaic-with-eye-shadows-and-brush.jpg?s=612x612&w=0&k=20&c=byEPkbWJAw-t5RVOVA9rN2jYhtQLZQpjxTk9algNjcQ=" alt="Pro 12-Shade Eyeshadow Palette" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Pro 12-Shade Eyeshadow Palette</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A sleek kit featuring ultra-blendable matte, shimmer, and metallic neutral tones.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$39</span>
+        <button class="btn" onclick="addToCart('Pro 12-Shade Eyeshadow Palette', 39)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1067436690/photo/powder-highlighter-in-a-silver-powder-box-with-gold-sparkles-reflected-in-the-mirror-isolated.jpg?s=612x612&w=0&k=20&c=78ZtEC_pZ6e1fWOpZ5R-Gdj3JS3o_Wu6VTXzC9tm9VA=" alt="Shimmering Gold Body Highlighter" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Shimmering Gold Highlighter</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Liquid illuminating highlight designed to give collarbones and cheekbones an intense sun-kissed finish.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$26</span>
+        <button class="btn" onclick="addToCart('Shimmering Gold Highlighter', 26)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/665130730/photo/white-make-up-brush-on-smeared-blue-powder.jpg?s=612x612&w=0&k=20&c=VrbKkwrNiQ3aLVP6eKpKoEn2AOO89maC6GM98fcLi7o=" alt="Ultimate Makeup Brush Set" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Ultimate Makeup Brush Set</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">An 8-piece collection of ultra-soft synthetic, cruelty-free professional blending tools.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$48</span>
+        <button class="btn" onclick="addToCart('Ultimate Makeup Brush Set', 48)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1126209085/photo/cosmetic-bottle-top-view-pink-toned-background-framed-fresh-flowers.jpg?s=612x612&w=0&k=20&c=2W4VF59PkKwuRTviR0LlKd78lVc6XGN8LCVoqAwxmwo=" alt="Botanical Cleansing Gel Balm" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Botanical Cleansing Balm</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Gentle, non-stripping facial cleanser that melts away stubborn makeup and daily impurities.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$24</span>
+        <button class="btn" onclick="addToCart('Botanical Cleansing Balm', 24)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2280125913/photo/sunscreen-and-after-sun-products-with-decorative-sun-3d-rendering.jpg?s=612x612&w=0&k=20&c=FR9vRS273LX4-Pbk7jRv6aQQSZANB7n9wTRoDGdKYJc=" alt="Broad Spectrum SPF 50 Sunscreen" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Broad Spectrum SPF 50</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Ultra-lightweight invisible shield formula providing comprehensive UVA/UVB ray defense.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$29</span>
+        <button class="btn" onclick="addToCart('Broad Spectrum SPF 50', 29)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/2273718462/photo/close-up-of-specialized-lint-free-under-eye-patches-in-pink-packaging-for-lash-extension.jpg?s=612x612&w=0&k=20&c=tk9d-qWpVLK_6h15HQelmJd4Dvre86w_ElAAEsAB7SI=" alt="Hydrogel Under-Eye Patches" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Hydrogel Under-Eye Patches</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Cooling caffeine-infused patches designed to instantly depuff and brighten dark under-eye circles.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$20</span>
+        <button class="btn" onclick="addToCart('Hydrogel Under-Eye Patches', 20)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/534115492/photo/mascara-make-up-beauty-blog-image.jpg?s=612x612&w=0&k=20&c=Jhd2gCqsa1dvvkotqF_cTqlpis5sHC0Ksn3WY_uvSpU=" alt="Perfect Definition Liquid Eyeliner" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Liquid Precision Eyeliner</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Ultra-fine felt tip pen engineered for executing flawless, waterproof graphic wing strokes.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$16</span>
+        <button class="btn" onclick="addToCart('Liquid Precision Eyeliner', 16)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1339460636/photo/bottles-skincare-lotion-serum-medical-rose-flowers-organic-natural-cosmetic.jpg?s=612x612&w=0&k=20&c=EX3YwouVfOqE2nG6F1mgZxoZXATJMLQgy7H4BNHV5V0=" alt="Soothing Rose Water Toner" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Soothing Rose Water Toner</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A refreshing botanical mist formulated to balance pH levels and prep skin fields for hydration.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$19</span>
+        <button class="btn" onclick="addToCart('Soothing Rose Water Toner', 19)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/147295900/photo/open-cosmetic-jar.jpg?s=612x612&w=0&k=20&c=k5UP6HyJk5eZf9Mr4CbyJxFczrQDB4GHe6lX2gwFo7Q=" alt="Overnight Lip Sleeping Mask" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Overnight Lip Mask</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Berry-infused leave-on lip treatment that sloughs away dead skin cells for smooth morning lips.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$15</span>
+        <button class="btn" onclick="addToCart('Overnight Lip Mask', 15)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1034180624/photo/washing-detergent-capsule-pod-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=VIKf5GwJHyKLbLHDPLTWgegd18CTsfCRUX0NXPdmxKM=" alt="Matte Finishing Setting Powder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Translucent Setting Powder</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Micro-fine translucent locking powder designed to absorb excess oils and blur skin texture blemishes.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$25</span>
+        <button class="btn" onclick="addToCart('Translucent Setting Powder', 25)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1828648524/photo/niacinamide-in-a-bottle-substances-used-for-treatment-or-medical-beauty-enhancement.jpg?s=612x612&w=0&k=20&c=-n_vkOMMxfk7ROdDr3zXRZ-g4AVLF1XOpf-UeGc8Oic=" alt="Niacinamide Pore-Tight Serum" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>10% Niacinamide Serum</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Targeted clarifying solution designed to regulate sebum protection and clear congested complexions.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$32</span>
+        <button class="btn" onclick="addToCart('10% Niacinamide Serum', 32)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1480571724/photo/yellow-facial-mask-natural-skin-and-hair-care-concept-top-view.jpg?s=612x612&w=0&k=20&c=AJ97WSEtLux0Q6fMFxb6RjkO31laVoMaN33OkTwP20I=" alt="Nourishing Shea Butter Body Lotion" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Shea Butter Body Lotion</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Rich, non-greasy barrier lotion blended with raw African shea extracts for intense body conditioning.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$21</span>
+        <button class="btn" onclick="addToCart('Shea Butter Body Lotion', 21)">Add To Cart</button>
+    </div>
+</div>
+
+<div class="product-card" data-category="cosmetics">
+    <div class="image-placeholder">
+        <img src="https://media.istockphoto.com/id/1266868401/photo/transparent-cosmetic-bottle-in-water.jpg?s=612x612&w=0&k=20&c=An4hPEDwonFQgHarm945U1XfbiI0NXuyUMQ4Cr-FJSo=" alt="Glow-Fix Makeup Setting Spray" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+    <h3>Glow-Fix Setting Spray</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">A lightweight locking mist providing up to 16 hours of melting defense and an airbrushed finish.</p>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <span style="font-weight: bold; color: var(--accent-color); font-size: 1.2rem;">$23</span>
+        <button class="btn" onclick="addToCart('Glow-Fix Setting Spray', 23)">Add To Cart</button>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+        <section id="pricing" class="page">
+            <div class="pricing-header" style="text-align: center; margin-bottom: 2rem;">
+                <h2>Flexible Pricing Models</h2>
+                <p style="color: var(--text-muted);">Subscription tech bundles tailored for creators and corporations alike.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Starter Card -->
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">₦3,500<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>Access to basic store features</li>
+                        <li>Standard 3-5 day shipping</li>
+                        <li>Email customer support</li>
+                        <li>Extended 30-day return window</li>
+                        <li>Baseline 2% cashback rewards</li>
+                    </ul>
+                    <button class="btn" style="width: 100%; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color);" onclick="payWithKora(45000, 'STARTER')">Get Started</button>
+                </div>
+
+                <!-- Pro Creator Card -->
+                <div class="pricing-card premium" data-category="beauty">
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-gradient); color: #000; padding: 2px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: bold;">POPULAR</div>
+                    <h3>Pro Creator</h3>
+                    <div class="price">₦8,500<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <ul class="pricing-features">
+                        <li><strong>Includes All Starter Perks</strong></li>
+                        <li>Upgraded Free Next-Day Shipping</li>
+                        <li>24/7 Priority Live Chat Support</li>
+                        <li>24-Hour Early Access to Product Drops</li>
+                        <li>Exclusive Pro Member Discounts</li>
+                        <li>Instant Device Trade-In Coverage</li>
+                    </ul>
+                    <button class="btn" onclick="payWithKora(120000, 'PRO')">Upgrade to Pro</button>
+                </div>
+
+                <!-- Premium Card -->
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">₦15,000<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <ul class="pricing-features">
+                        <li><strong>Includes All Pro Creator Perks</strong></li>
+                        <li>Unlimited Custom Studio Deployments</li>
+                        <li>Direct 1-on-1 Executive Phone Line</li>
+                        <li>Zero Checkout Processing Fees</li>
+                        <li>White-Glove Insured Delivery Courier</li>
+                        <li>Personal Global Product Sourcing Agent</li>
+                    </ul>
+                    <button class="btn" onclick="payWithKora(15000, 'PREMIUM')">Go Premium</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="page">
+            <div class="pricing-header">
+                <h2>Our Ecosystem Services</h2>
+                <p style="color: var(--text-muted);">We don't just sell high-end hardware; we keep you covered everywhere.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="image-placeholder">🚀</div>
+                    <h3>Hyper Shipping</h3>
+                    <p style="color: var(--text-muted);">Global fulfillment centers ensure your purchase reaches you almost instantly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="image-placeholder">🛡️</div>
+                    <h3>Device Protection</h3>
+                    <p style="color: var(--text-muted);">Full accidental and technical hardware warranties with instant replacement turnarounds.</p>
+                </div>
+                <div class="service-card">
+                    <div class="image-placeholder">🔄</div>
+                    <h3>Seamless Trade-Ins</h3>
+                    <p style="color: var(--text-muted);">Trade your legacy models back to us for guaranteed maximum value credit anytime.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="contact-container">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Find Us</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Do you have questions about products, custom setups, or corporate deployments? Visit us at N0.125 Inoviation Way or contact us through our support .</p>
+                    <div class="image-placeholder" style="height: 200px;">
+                        <img src="map.png">
+                    </div>
+                </div>
+                <div>
+                    <form id="contactForm" action="https://formspree.io/f/xvznbkqq" method="POST" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="What you want us to be aware of ?"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Encrypted Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jer̀ange Inc.Product of David Jerry and Louange Beni.</p>
+        <div id="cartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(8px); z-index: 10000; justify-content: center; align-items: center;">
+            <div style="background: #111827; border: 1px solid #00d2ff; width: 90%; max-width: 500px; border-radius: 12px; padding: 30px; box-shadow: 0px 10px 30px rgba(0, 210, 255, 0.15); font-family: sans-serif; color: #ffffff; position: relative;">
+                <button onclick="toggleCartModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: #9ca3af; font-size: 1.5rem; cursor: pointer;">&times;</button>
+                
+                <h2 style="color: #00d2ff; margin-bottom: 20px; font-size: 1.8rem; border-bottom: 1px solid rgba(0, 210, 255, 0.2); padding-bottom: 10px;">Your Shopping Cart</h2>
+                
+                <div id="cartItemsList" style="max-height: 250px; overflow-y: auto; margin-bottom: 20px; padding-right: 5px;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 1.3rem; margin-top: 15px; border-top: 1px solid rgba(156, 163, 175, 0.2); padding-top: 15px;">
+                    <span>Total:</span>
+                    <span id="cartTotalText" style="color: #00d2ff;">$0</span>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 25px;">
+                    <button onclick="clearCart()" style="background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; flex: 1;">Clear</button>
+                    <button onclick="alert('Proceeding to secure checkout deployment...')" style="background: #00d2ff; color: #0b0f19; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; flex: 2; transition: 0.2s;">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Direct Inline Payment Handler Definition -->
+    <script>
+        function payWithKora(planAmount, planName) {
+            if (typeof window.Korapay === 'undefined') {
+                alert("The secure payment library is finishing loading. Please give it 2 seconds and try again!");
+                return;
+            }
+
+            window.Korapay.initialize({
+                key: 'pk_test_4qG94esHGg1vTsteHZQdgiQTHVT5qC9jmAm49X7h', 
+                reference: planName + '_' + Date.now(), 
+                amount: planAmount, 
+                currency: 'NGN', 
+                customer: {
+                    name: planName + ' Member', 
+                    email: planName.toLowerCase() + '_sub@nexusmarket.com' 
+                },
+                onSuccess: function(response) {
+                    console.log(planName + ' processing complete:', response);
+                    alert('Success! Your ' + planName + ' tier subscription is active.');
+                },
+                onClose: function() {
+                    console.log('User minimized payment interface.');
+                }
+            });
+        }
+    </script>
+
+    <script src="script.js"></script>
+    <!-- Official Korapay Web Distribution Bundle Package Source Link -->
+    <script src="https://korablobstorage.blob.core.windows.net/modal-bucket/korapay-collections.min.js"></script>
+</body>
+</html>
