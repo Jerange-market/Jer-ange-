@@ -358,17 +358,3 @@ footer {
 .product-card.hide-product {
     display: none !important;
 }
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column !important;
-        gap: 12px !important;
-        padding: 15px 10px !important;
-        text-align: center !important;
-    }
-    nav {
-        justify-content: center !important;
-        width: 100% !important;
-        gap: 15px !important;
-    }
-}
